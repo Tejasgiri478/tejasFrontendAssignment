@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | My App</title>
+  <!-- Link Css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Link Js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <section class="Header m-3 p-2">
+    <div class="row align-items-center">
+      <div class="col-md-3">
+        <span class="bi bi-telephone"></span><b>Contact-us:</b> (+91) 9998888777
+      </div>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="search" name="search" id="search" class="form-control" placeholder="Search anything here">
+          <button class="btn btn-sm btn-dark">
+            <span class="bi bi-search text-white"></span>
+          </button>
+        </div>
+      </div>
+      <div class="col-md-3 text-end">
+        <button data-bs-toggle="modal" data-bs-target="#login" class="btn btn-sm btn-dark me-2">Account <span
+            class="bi bi-person"></span></button>
+        <button class="btn btn-sm btn-dark">Cart <span class="bi bi-cart"></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark p-2">
+    <!-- logo -->
+    <a href="index.html" class="navbar-brand ms-3">My App</a>
+    <!-- navbar -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li class="nav-item"><a href="wholeseller.html" class="nav-link">Wholeseller</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Us Section -->
+  <div class="container mt-5">
+    <h2>About Us</h2>
+    <p class="lead">We are committed to providing top-quality healthcare products to improve your well-being.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Our Mission</h3>
+        <p>At My App, our mission is to offer a wide range of high-quality medical products that cater to your health
+          and wellness needs. We strive to provide reliable, effective, and affordable healthcare solutions for
+          everyone.</p>
+      </div>
+      <div class="col-md-6">
+        <h3>Our Vision</h3>
+        <p>We envision a healthier world where everyone has easy access to affordable medications and healthcare
+          products. Through innovation and dedication, we aim to be a trusted name in the healthcare industry.</p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3>Our Values</h3>
+        <ul>
+          <li><strong>Quality:</strong> We ensure that all our products meet the highest standards of quality.</li>
+          <li><strong>Integrity:</strong> We operate with honesty and transparency in all our dealings.</li>
+          <li><strong>Customer-Centric:</strong> Our customers’ health and satisfaction are our top priorities.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>Wide selection of medicines and health products.</li>
+          <li>Affordable pricing with great discounts.</li>
+          <li>Fast and reliable delivery.</li>
+          <li>24/7 customer support for all your queries.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3 mt-5">
+    <p>&copy; 2024 My App. All Rights Reserved.</p>
+    <div>
+      <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+    </div>
+  </footer>
+  <!-- Login Modal -->
+  <div class="modal fade" id="login" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 60%;">
+      <div class="modal-content">
+        <div class="row g-0">
+          <div class="col-md-6 bg-primary text-white p-4 d-flex flex-column justify-content-center align-items-center">
+            <h2 class="mb-3">Welcome Back!</h2>
+            <p class="mb-3">Don’t have an account?</p>
+            <a href="register.html">
+              <button class="btn btn-outline-light w-75">Register Here</button>
+            </a>
+          </div>
+          <div class="col-md-6 bg-light p-4">
+            <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="mb-4">Login</h4>
+            <form>
+              <div class="form-group mb-3">
+                <input type="email" placeholder="Email" class="form-control" required />
+              </div>
+              <div class="form-group mb-3">
+                <input type="password" placeholder="Password" class="form-control" required />
+              </div>
+              <div class="form-group d-flex justify-content-between align-items-center">
+                <input type="submit" value="Sign In" class="btn btn-primary" />
+                <a href="#" data-bs-toggle="modal" data-bs-target="#frg">Forgot Password?</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forget Password Modal -->
+  <div class="modal fade" id="frg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 60%;">
+      <div class="modal-content">
+        <div class="row g-0">
+          <div class="col-md-6 bg-warning text-dark p-4 d-flex flex-column justify-content-center align-items-center">
+            <h2 class="mb-3">Reset Password</h2>
+            <p class="mb-3">Don’t have an account?</p>
+            <a href="register.html">
+              <button class="btn btn-outline-dark w-75">Register Here</button>
+            </a>
+          </div>
+          <div class="col-md-6 bg-light p-4">
+            <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="mb-4">Forgot Password</h4>
+            <form>
+              <div class="form-group mb-3">
+                <input type="email" placeholder="Enter Your Email" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-warning text-white" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

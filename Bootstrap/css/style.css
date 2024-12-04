@@ -1,0 +1,186 @@
+.navbar {
+    margin: auto;
+    padding: auto;
+}
+
+.navbar-links {
+    margin-top: 1%;
+    margin-left: 60%;
+
+}
+
+.navbar-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 20px;
+}
+
+.slider img {
+    width: 100%;
+    height: 400px;
+}
+
+/* Quick Access Cards */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.card .btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+/* Registration Page Styles */
+.registration-section {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.registration-section .register-form .form-control {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.registration-section .register-form .form-control:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.registration-section .register-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Modal Styling */
+.modal-dialog {
+    max-width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.bg-primary,
+.bg-warning {
+    text-align: center;
+    padding: 2rem;
+}
+
+.modal-content h2,
+.modal-content h4 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.modal-content form {
+    padding: 0 1rem;
+}
+
+.modal-content .form-group input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.modal-content .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.cardbox img {
+    height: auto;
+    width: 100%;
+}
+
+@media only screen and (max-width:767px) {
+    .navbar-links {
+        margin-top: 1%;
+        margin-left: 0;
+
+    }
+
+    .navbar-links li {
+        display: block;
+        margin-left: 15px;
+    }
+
+    .navbar-links a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        font-size: 20px;
+    }
+
+    .slider img {
+        max-width: 100vw;
+        height: 300px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+    }
+
+    .bg-primary,
+    .bg-warning {
+        padding: 1.5rem;
+    }
+
+    .modal-content .form-group input {
+        font-size: 14px;
+    }
+
+    .modal-content .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .registration-section {
+        padding: 30px 10px;
+    }
+
+    .registration-section .register-form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

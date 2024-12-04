@@ -1,0 +1,27 @@
+Q1. What is CSS Flexbox, and how is it useful for layout design? Explain the terms flex-container and flex-item.
+A.  Flexbox is the box to align items in different direction in website,
+    That is the display property with the different values 
+
+    The flaxbox is useful to show same content in different styles to apply one different devices;
+    i.e if we apply navbar to flax-direction:row; in desktop view we can manage by applying its direction to column, for mobile devices, so that we can display same content to different styles.
+
+    The flex-container contains more then one flexboxes (Parant flex) and manage by display property.
+    The direct child elements of a flex container automatically becomes flexible (flex) items.
+    
+    Here we can see flax-conta and clild divs are flex-items {
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div> 
+        <div>4</div>
+    </div>
+    }
+
+
+Q2. Describe the properties justify-content, align-items, and flexdirection used in Flexbox.
+    
+    Justify-content is used to apply alignments on the flex items;
+    
+    For align-items in this flexboxes we can apply different values of Justify content. i.e center, flex-start, or right, etc.. 
+    
+    The flex-direction property defines in which direction the container wants to stack the flex items. i.e flex-direction: column, row, column-reverse, or row-reverse.

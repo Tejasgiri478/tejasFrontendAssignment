@@ -1,0 +1,65 @@
+Q1. What is css Selector ? Provide examples of element, class, and ID selectors.
+    A. Css selector is used to select elements of html to apply stylesheet on it.
+       there are mainly three  types of simple selectors 
+       1) Element selector 
+       2) Id selector
+       3) Class selector
+
+        I)  Element (tag) selector 
+            this type of selector is used to select all elements (tags) in webpage by the same name
+            i.e if we want to apply style on paragraph we can select HTML elements based on the element name <p>
+
+            syntax : element Name {
+                     property : value ;
+                     }
+            there are some drawbacks of this selector is that select all elements by that name
+
+        II) id selector 
+            this type of selector is used to select specific elements (tags) in webpage
+            i.e if we want to apply style on specific element we can select HTML elements based on the element id we can give id in that perticular element to call it latter by '#' in <style>
+
+            syntax : #IdName {
+                     property : value ;
+                     }
+            there are also drawback of this selector is that it can only select unique element amd its not repeatable
+
+        III) class selector 
+            this type of selector is used to select specific elements (tags) in webpage
+            i.e if we want to apply same style on some element we can select HTML elements based on the element class we can give class in that all element to call it latter by '.' in <style>
+
+            syntax : .className {
+                     property : value ;
+                     }
+            the drawback of not repeatation is solved by this selector, repeatable and not unique
+
+
+
+
+Q2. Explain the concept of CSS specificity. How do conflicts between multiple stylesget resolved?
+     A. CSS Specificity is a fundamental concept in CSS that determines the order of style application. 
+        It is calculated based on the types of selectors used, including inline styles, IDs, classes, attributes, and element types. 
+        Understanding CSS Specificity is important for:
+        Avoiding styling conflicts Ensuring consistent design application Maintaining control over CSS code This knowledge is essential for you to make efficient, maintainable, and scalable stylesheets that render their website or application as intended.
+
+        CSS Specificity Rules 
+            1. Inline CSS: Inline CSS is a method of applying CSS styling directly within HTML elements using the “style” attribute. It has the highest specificity and will override all other selectors, including External stylesheets and Internal CSS.
+
+            2. Internal CSS: Internal stylesheets are a method for defining CSS styles within an HTML document’s <style> element. This styling can be used when we want to directly implement the styles within an HTML Document. The specificity of this styling depends on the CSS Selector used with the Element. For instance, if an id is used then it has the highest specificity, in comparison to the External stylesheet. For this, internal CSS will override rules defined in an external stylesheet.
+
+            3. External CSS: External CSS is used to style multiple HTML pages with a single style sheet. External CSS contains a separate CSS file with a .css extension. This style can be linked via the <link> tag in the HTML document. The specificity of this styling also depends on the CSS Selector used with the Element.
+
+
+
+
+Q3. What is the difference between internal, external, and inline CSS? Discuss the advantages and disadvantages of each approach.
+    A. The difference between inline internal and external css is very basic of priorities to apply styles on html elements, basically inline style sheet is written in html elements as a style attribute of tags, internal css is written in html head section, and external css is the external  '.css' file and linked with html file,
+
+    Advantages And Disadvantages Of all 3 types of css is :
+        Inline -> Advantage : Priority to apply style is maximum
+                  Disadvantage : For every single elements we need to apply css separate.
+
+        Internal -> Advantage : To apply css on single page website 
+                    Disadvantage :  If we need to apply same style on more than one page we need to write css again and again
+
+        External -> Advantage :  To apply same theme for all the pages of site we use this type as it needs to written only once.
+                    Disadvantage : Priority to apply style is lowest, if we apply css internal it overwrite this css
