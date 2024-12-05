@@ -1,0 +1,14 @@
+Q1. What are media queries in CSS, and why are they important for responsive design?
+A.  The medea queries is used to manage Styles according to ui of different devices (medea plateforms) I.e with the medea query we can apply different styles for web and mobile view accordingly, we can run same webpage in different layouts. 
+
+Q2. Write a basic media query that adjusts the font size of a webpage for screens smaller than 600px
+A. @medea only screen and (max-width:600px) {
+    * {
+        margin :0; 
+        padding : 0;
+        box-sizing : border-box;
+    }
+    body {
+        font-size : 16px;
+    }
+    }

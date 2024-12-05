@@ -3,18 +3,21 @@ A.  CSS Grid is a two-dimensional layout system, allowing you to position elemen
 
 Q2. Describe the grid-template-columns, grid-template-rows, and grid-gap properties. Provide examples of how to use them.
 A.  In CSS Grid Layout, grid-template-columns defines the structure of a grid by specifying the number and width of columns, grid-template-rows does the same for the rows, and grid-gap sets the space between grid lines, allowing you to control the spacing between both rows and columns within a grid container.
-Explanation:
-grid-template-columns:
-Syntax: grid-template-columns: <track-size> [ <track-size> ]*;
-Values:
-Pixel values: Sets a fixed width for each column (e.g., grid-template-columns: 100px 200px 150px;)
-Percentages: Sets a column width relative to the container (e.g., grid-template-columns: 25% 50% 25%;)
-fr unit: Distributes available space proportionally (e.g., grid-template-columns: 1fr 2fr 1fr;)
-auto: Automatically sizes columns based on content (e.g., grid-template-columns: auto auto auto;)
-grid-template-rows:
-Syntax: grid-template-rows: <track-size> [ <track-size> ]*;
-Functionality: Identical to grid-template-columns, but applies to row heights.
-grid-gap:
-Syntax: grid-gap: <length>;
-Values: Pixel values, percentages, or other length units
-Behavior: Sets the space between all grid lines (both columns and rows) 
+    Explanation:
+        grid-template-columns:
+            Syntax: 
+            grid-template-columns: <track-size> [ <track-size> ]*;
+            Values:
+                Pixel values: Sets a fixed width for each column (e.g., grid-template-columns: 100px 200px 150px;)
+                Percentages: Sets a column width relative to the container (e.g., grid-template-columns: 25% 50% 25%;)
+                fr unit: Distributes available space proportionally (e.g., grid-template-columns: 1fr 2fr 1fr;)
+                auto: Automatically sizes columns based on content (e.g., grid-template-columns: auto auto auto;)
+
+            grid-template-rows:
+                Syntax: grid-template-rows: <track-size> [ <track-size> ]*;
+                Functionality: Identical to grid-template-columns, but applies to row heights.
+
+            grid-gap:
+                Syntax: grid-gap: <length>;
+                Values: Pixel values, percentages, or other length units
+                Behavior: Sets the space between all grid lines (both columns and rows) 

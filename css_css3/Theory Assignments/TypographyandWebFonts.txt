@@ -1,0 +1,16 @@
+Q1. Explain the difference between web-safe fonts and custom web fonts. Whymight you use a web-safe font over a custom font?
+A.  A "web-safe font" is a font that is pre-installed on most computers and devices, meaning it will display correctly on almost any user's system without needing to be downloaded, while a "custom web font" is a unique font that is not pre-installed and needs to be loaded onto a webpage from a web server for users to see it, potentially impacting page load time if not optimized properly.
+We use web-safe font over a custom font because web-safe fonts are guaranteed to be available on almost every user's device, ensuring that your website displays correctly regardless of their operating system or installed fonts.
+
+Q2. What is the font-family property in CSS? How do you apply a custom GoogleFont to a webpage?
+A.  In CSS, the "font-family" property allows you to specify which font should be used for a particular element on a webpage, essentially letting you choose the typeface for text displayed on your website.
+    To apply a custom Google font to a webpage, you can:
+        1. Go to fonts.google.com
+        2. Search for a font and select it
+        3. Click the Get font button
+        4. Click the Get embed code button
+        5. Select the @import option from the Web tab
+        6. Copy the code
+        7. Paste the import code into the HTML and CSS code of your website
+        8. Save both files
+        9. Refresh your website to see the new font 
