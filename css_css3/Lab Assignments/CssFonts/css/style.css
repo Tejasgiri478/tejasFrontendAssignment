@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Blog Post */
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.post-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #222;
+    margin: 0 0 10px;
+}
+
+.post-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #555;
+    margin: 0;
+}
+
+/* Content Styles */
+.post-content p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.post-content p:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 28px;
+    }
+
+    .post-subtitle {
+        font-size: 18px;
+    }
+
+    .post-content p {
+        font-size: 16px;
+    }
+}
