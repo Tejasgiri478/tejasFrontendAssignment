@@ -1,0 +1,17 @@
+Q1. What is JavaScript? Explain the role of JavaScript in web development.
+A.  -> Javascript is client side scripting language.
+    -> It also used as programming language.
+    -> Manage and Developed by ECM script organizations.
+    -> Most popular scripting language to handle any web apps and websites.
+    -> Loads on users web browsers.
+    -> Called inside of head and body sections.
+    -> we can identify javascript file by its '.js' file extention.
+    -> Its case sensitive language.
+    -> In html we can use javascript inside <script> tag.
+
+Q2. How is JavaScript different from other programming languages like Python orJava?
+A.  JavaScript is primarily distinct from languages like Python and Java because it's primarily designed for web browser interaction, meaning it's interpreted directly by the browser and used to create dynamic and interactive elements on websites, while languages like Python and Java are more versatile and can be used for a wider range of applications, including back-end development and complex system building; additionally, JavaScript is dynamically typed, unlike Java which is strongly typed, making it more flexible but potentially less predictable in certain situations
+
+Q3. Discuss the use of <script> tag in HTML. How can you link an external JavaScript file to an HTML document?
+A.  The <script> tag in HTML is used to embed JavaScript code within an HTML document, allowing you to add dynamic functionality to your webpage; to link an external JavaScript file, you use the src attribute within the <script> tag, specifying the path to your external JavaScript file, effectively connecting it to your HTML page.
+ i.g <script src="myScript.js"></script> 
