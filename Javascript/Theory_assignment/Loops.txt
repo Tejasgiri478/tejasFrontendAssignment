@@ -1,0 +1,24 @@
+Q1. Explain the different types of loops in JavaScript (for, while, do-while). Provide abasic example of each.
+A.  Loops is used to print same statement (run the code) many times without writing code again,
+    there are many types of loop in the javascript, for, for each, for in, for of, while, do-while etc..
+    here we understand each one in simple example
+    For : for( Initialze loop; condition; increment/Decrement ) {
+        some code
+    }
+    While : 
+    while(condition)
+    {
+        some code
+        Increment/Decrement
+    }
+    Do-While :
+    d0 {
+        code that run atleast one time
+    }
+    while(condition)
+    {
+        code if condition is true
+    }
+
+Q2. What is the difference between a while loop and a do-while loop?
+A.  The main difference between while and do-while is that in while loop loop only executed if and only if the condition is satisfied, but in do-while first execute do block atleast one time if condition satisfy or not also and than while block executed and if condition matches do executed again

@@ -1,0 +1,55 @@
+Q1. What are the different types of operators in JavaScript? Explain with examples.(Arithmetic operators; Assignment operators; Comparison operators; Logical operators.)
+A.  The operators are used to perform different types of mathematical and logical computations.
+    We can use different types of operators to perform 
+        • Arithmetic operators
+        • Assignment operators
+        • Comparison operators
+        • Logical operators
+
+        1) Arithmetic operators : To perform mathematical calculations.
+            i.e + (Addition)
+                - (Subtraction)
+                * (Multiplication)
+                / (Division)
+                % (Modulus - returns the remainder after division)
+                ** (Exponentiation - raises a number to a specified power)
+                ++ (Increment - adds 1)
+                -- (Decrement - subtracts 1)
+
+        2) Assignment operators : To assign values to variables.
+            i.e = (Simple assignment)
+                += (Add and assign)
+                -= (Subtract and assign)
+                *= (Multiply and assign)
+                /= (Divide and assign)
+                %= (Modulus and assign)
+                **= (Exponentiation and assign)
+            
+        3) Comparison Operators : To compare values and return a boolean (true or false).
+            i.e == (Equal to)
+                === (Strict equal to - checks both value and type)
+                != (Not equal to)
+                !== (Strict not equal to)
+                > (Greater than)
+                < (Less than)
+                >= (Greater than or equal to)
+                <= (Less than or equal to) 
+        4) Logical Operators : To combine multiple boolean values to produce a single boolean.
+            i.e && (Logical AND)
+                || (Logical OR)
+                ! (Logical NOT)
+
+Q2. What is the difference between == and === in JavaScript?
+A.  In JavaScript, == and === are both comparison operators, but they differ in how they perform the comparison:
+    
+    == (Loose Equality): Compares values after performing type coercion. This means it tries to convert the operands to the same type before comparison.
+    Can lead to unexpected results, especially when comparing different data types.
+    
+    === (Strict Equality): Compares both value and type without performing type coercion.
+    Considered safer and more predictable than ==.
+
+    i.e 1 == '1'; // true, because '1' is converted to a number 1
+        1 === '1'; // false, because the types are different
+
+        0 == false; // true, because false is converted to 0
+        0 === false; // false, because the types are different

@@ -1,0 +1,21 @@
+Q1. What is control flow in JavaScript? Explain how if-else statements work withan example.
+A.  In JavaScript, control flow refers to the order in which statements are executed. 
+    By default, code is executed line by line, from top to bottom. 
+    However, you can use control flow statements to alter this order.
+
+    if-else statements 
+    This control flow work with condition block by block 
+    there are two blocks if and else 
+    if (codition){
+        code when con matched
+    }
+    else{
+        code to execute when condition not matched
+    }
+
+    Working : here two blocks if with codition : whre if condtiton is true if block exicuted, otherwise else block
+
+Q2. Describe how switch statements work in JavaScript. When should you use a switch statement instead of if-else?
+A.  switch function is used to check multiple true cases, we can use switch statement to check where the condition  match else go to the default case 
+i.e if we are checking todays day,in if-else the code run line by line and check all code, so slower the execution, but if we use switch function that directly check matchded case other go to the default case.... 
+So switch is faster execution in comare to if-else
