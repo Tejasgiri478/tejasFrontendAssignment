@@ -1,0 +1,36 @@
+Q1. What are functions in JavaScript? Explain the syntax for declaring and calling a function.
+A.  function is used to call multiple statement when we use that function on the element of website when we interact with it.
+
+A JavaScript function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).
+
+// Function to compute the product of p1 and p2
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+
+ 
+Q2. What is the difference between a function declaration and a function expression?
+A.  Function Declaration:
+    A function declaration also known as a function statement declares a function with a function keyword. The function declaration must have a function name.
+    Function declaration does not require a variable assignment as they are standalone constructs and they cannot be nested inside a functional block.
+    These are executed before any other code.
+    The function in the function declaration can be accessed before and after the function definition.
+
+    syntax: function geeksforGeeks(paramA, paramB) {
+        // Set of statements
+        }
+
+    Function Expression:
+    A function Expression is similar to a function declaration without the function name.
+    Function expressions can be stored in a variable assignment.
+    Function expressions load and execute only when the program interpreter reaches the line of code.
+    The function in the function expression can be accessed only after the function definition.
+
+    Syntax: let geeksforGeeks= function(paramA, paramB) {
+        // Set of statements
+        }
+
+Q3. Discuss the concept of parameters and return values in functions.
+A.  
