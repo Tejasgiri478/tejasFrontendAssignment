@@ -1,0 +1,41 @@
+Q1. What is the DOM (Document Object Model) in JavaScript? How does JavaScript interact with the DOM?
+A.  The Document Object Model (DOM) is a structured representation of an HTML document, where elements are organized in a tree-like structure. JavaScript uses the DOM to dynamically access, modify, and manipulate HTML and CSS content.
+
+How JavaScript Interacts with the DOM?
+JavaScript interacts with the DOM using various methods to:
+ex.
+Select elements  :  document.getElementById("demo");  // Select by ID
+            document.querySelector(".class"); // Select by class or tag
+
+modify content : document.getElementById("demo").innerText = "Hello!";
+
+Change Style : document.getElementById("demo").style.color = "red";
+
+Handle Events : document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+JavaScript dynamically manipulates the DOM to update web pages without reloading them, enhancing interactivity.
+
+Q2. Explain the methods getElementById(), getElementsByClassName(),and querySelector() used to select elements from the DOM.
+
+A. JavaScript provides several methods to select elements from the Document Object Model (DOM):
+
+getElementById(id): 
+Selects a single element by its unique id.
+Returns a single element or null if not found.
+ex. const element = document.getElementById("demo");
+    element.style.color = "blue";
+
+getElementsByClassName(className):
+Selects all elements with a specific class name.
+Returns an HTMLCollection (a live collection of elements).
+ex. const items = document.getElementsByClassName("item");
+    items[0].style.fontWeight = "bold";  // Modify the first item
+
+querySelector(selector):
+Selects the first matching element using a CSS selector (id, class, tag).
+Returns null if no match is found.
+ex. const firstItem = document.querySelector(".item");
+    firstItem.style.backgroundColor = "yellow";
+
+These methods allow JavaScript to dynamically interact with and manipulate webpage elements efficiently.

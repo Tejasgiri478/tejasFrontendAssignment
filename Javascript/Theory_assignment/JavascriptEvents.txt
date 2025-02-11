@@ -1,0 +1,35 @@
+Q1. What are JavaScript events? Explain the role of event listeners.
+A.  What are JavaScript Events?
+JavaScript events are actions or occurrences that happen in the browser, such as clicks, keypresses, mouse movements, form submissions, and page loads. Events allow interaction between users and web pages.
+
+Role of Event Listeners
+Event listeners detect and respond to events by executing specific functions. They allow dynamic behavior without modifying HTML attributes.
+
+ex.  document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+    });
+Here, addEventListener("click", function) listens for a click on the button with id="btn" and triggers an alert.
+Event listeners separate JavaScript from HTML, improve maintainability, and allow multiple handlers for the same event.
+
+
+Q2. How does the addEventListener() method work in JavaScript? Provide an example.
+A.  The addEventListener() method attaches an event handler to an HTML element without overwriting existing event handlers. It allows multiple event listeners on the same element for different events or the same event.
+
+Syntax : element.addEventListener(event, function, useCapture);
+event: The event type (e.g., "click", "keydown", "mouseover").
+function: The function to execute when the event occurs.
+useCapture (optional): A boolean (true for capturing phase, false for bubbling phase, default is false).
+ 
+Ex. // Select the button element
+const button = document.getElementById("myButton");
+
+// Add a click event listener
+button.addEventListener("click", function() {
+    alert("Button was clicked!");
+});
+In this example, when the button with id="myButton" is clicked, an alert box appears.
+
+Key Benefits of addEventListener():
+✔ Allows multiple event handlers for the same event.
+✔ Helps keep JavaScript separate from HTML.
+✔ Supports event capturing and bubbling.

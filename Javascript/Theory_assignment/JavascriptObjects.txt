@@ -1,0 +1,42 @@
+Q1. What is an object in JavaScript? How are objects different from arrays?
+A.  Objects in JavaScript
+An object in JavaScript is a data structure that stores key-value pairs. Each key (or property) has an associated value, which can be of any data type, including numbers, strings, arrays, functions, or even other objects. Objects are commonly used to represent real-world entities, such as a person or a product.
+
+    ex. const person = {
+    name: "Alice",
+    age: 25,
+    city: "New York"    
+    };
+
+Difference Between Objects and Arrays in JavaScript
+Objects and arrays are both data structures in JavaScript, but they serve different purposes. Objects store data in key-value pairs, making them ideal for representing entities with named properties, such as a person or a product. They are accessed using property names, like object.property or object["property"].
+On the other hand, arrays store ordered collections of data, where each element is accessed using a numerical index, like array[0]. Arrays are best suited for lists of similar data, such as a collection of names or numbers.
+While objects are typically used for structured data with distinct attributes, arrays are useful when order and position matter. Additionally, objects are iterated using for...in or Object.keys(), while arrays support methods like map(), forEach(), and filter().
+
+
+Q2. Explain how to access and update object properties using dot notation and bracket notation.
+A.  In JavaScript, object properties can be accessed and updated using dot notation (.) and bracket notation ([]).
+
+Dot Notation
+Dot notation is the simplest and most common way to access or modify object properties.
+const person = { name: "Alice", age: 25 };
+ex.
+// Accessing properties
+console.log(person.name);  // Output: Alice
+
+// Updating properties
+person.age = 26;
+console.log(person.age);  // Output: 26
+
+Bracket Notation
+Bracket notation is useful when the property name is dynamic or contains special characters.
+ex.
+const person = { "first name": "Alice", age: 25 };
+
+// Accessing properties
+console.log(person["first name"]);  // Output: Alice
+
+// Updating properties
+person["age"] = 26;
+console.log(person["age"]);  // Output: 26
+Use dot notation for standard property names and bracket notation for dynamic or special-character property names.

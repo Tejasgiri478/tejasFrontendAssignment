@@ -1,0 +1,40 @@
+Q1. What is error handling in JavaScript? Explain the try, catch, and finally blocks with an example.
+A.  Error handling in JavaScript ensures that the program continues running smoothly even when unexpected errors occur. The try, catch, and finally blocks are used to handle errors gracefully.
+
+1. try Block
+Contains the code that may throw an error.
+
+2. catch Block
+Executes when an error occurs in the try block and handles the error.
+
+3. finally Block (Optional)
+Executes after try and catch, regardless of whether an error occurred.
+
+ex. try {
+    let num = 10;
+    console.log(num.toUpperCase()); // This will cause an error
+    } catch (error) {
+    console.log("An error occurred:", error.message);
+    } finally {
+    console.log("This will always run.");
+    }
+
+
+
+Q2. Why is error handling important in JavaScript applications?
+A.  Error handling is crucial in JavaScript applications for several reasons:
+
+Improves User Experience – Proper error handling ensures that users do not encounter unexpected crashes or unhelpful error messages. Instead, they receive meaningful feedback and guidance on what went wrong.
+
+Prevents Application Crashes – Without handling errors properly, an entire application or part of it might break, leading to a poor user experience.
+
+Debugging and Maintenance – Well-structured error handling makes it easier for developers to diagnose and fix issues, improving maintainability and reducing debugging time.
+
+Security – Poor error handling can expose sensitive application details, making it vulnerable to attacks. Properly handling and logging errors ensures that sensitive information is not exposed.
+
+Ensures Code Flow – Unhandled errors can cause unexpected behavior. By catching and managing errors, you can maintain a consistent flow in the application.
+
+Logging and Monitoring – Using tools like try...catch, window.onerror, or external logging services (e.g., Sentry, LogRocket) allows developers to track errors and improve application stability over time.
+
+Handles Asynchronous Code – In JavaScript, asynchronous operations (e.g., API calls, file reads) can fail. Handling these failures properly ensures the application can recover or notify the user.
+

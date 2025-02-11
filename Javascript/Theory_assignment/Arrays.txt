@@ -1,0 +1,62 @@
+Q1. What is an array in JavaScript? How do you declare and initialize an array?
+A.  An array in JavaScript is a special type of object that is used to store a list of values. It is an ordered collection of data, which can hold elements of any type, such as numbers, strings, objects, or even other arrays. Arrays in JavaScript are zero-indexed, meaning the first element is at index 0, the second at index 1, and so on.
+
+To declare and initialize an array, you use the following syntax:
+let arrayName = [element1, element2, element3, ...];
+EX. let fruits = ["apple", "banana", "cherry"];
+In the above example:
+
+    let fruits is the variable declaration.
+    The array ["apple", "banana", "cherry"] contains three string elements.
+    The array can hold values of different data types as well, like numbers, Boolean, or objects.
+
+
+Q2. Explain the methods push(), pop(), shift(), and unshift() used in arrays.
+A.  JavaScript arrays provide several built-in methods to modify and manipulate their elements:
+
+    push():
+        Adds one or more elements to the end of an array.
+        Returns the new length of the array.
+
+    Example:
+
+let fruits = ["apple", "banana"];
+fruits.push("cherry");
+console.log(fruits); // Output: ["apple", "banana", "cherry"]
+
+pop():
+
+    Removes the last element from the array.
+    Returns the removed element.
+    This method changes the length of the array.
+
+Example:
+
+let fruits = ["apple", "banana", "cherry"];
+let lastFruit = fruits.pop();
+console.log(fruits); // Output: ["apple", "banana"]
+console.log(lastFruit); // Output: "cherry"
+
+shift():
+
+    Removes the first element from the array.
+    Returns the removed element.
+    This method changes the length of the array.
+
+Example:
+
+let fruits = ["apple", "banana", "cherry"];
+let firstFruit = fruits.shift();
+console.log(fruits); // Output: ["banana", "cherry"]
+console.log(firstFruit); // Output: "apple"
+
+unshift():
+
+    Adds one or more elements to the beginning of an array.
+    Returns the new length of the array.
+
+Example:
+
+let fruits = ["banana", "cherry"];
+fruits.unshift("apple");
+console.log(fruits); // Output: ["apple", "banana", "cherry"]

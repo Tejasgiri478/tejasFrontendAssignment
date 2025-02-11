@@ -9,7 +9,7 @@ A.  -> Javascript is client side scripting language.
     -> Its case sensitive language.
     -> In html we can use javascript inside <script> tag.
 
-Q2. How is JavaScript different from other programming languages like Python orJava?
+Q2. How is JavaScript different from other programming languages like Python or Java?
 A.  JavaScript is primarily distinct from languages like Python and Java because it's primarily designed for web browser interaction, meaning it's interpreted directly by the browser and used to create dynamic and interactive elements on websites, while languages like Python and Java are more versatile and can be used for a wider range of applications, including back-end development and complex system building; additionally, JavaScript is dynamically typed, unlike Java which is strongly typed, making it more flexible but potentially less predictable in certain situations
 
 Q3. Discuss the use of <script> tag in HTML. How can you link an external JavaScript file to an HTML document?

@@ -33,4 +33,22 @@ A.  Function Declaration:
         }
 
 Q3. Discuss the concept of parameters and return values in functions.
-A.  
+A.  Parameters are the inputs a function takes. They are defined in the function's signature and can be used within  the function body. JavaScript supports default parameters and rest parameters.
+    
+    function greet(name, age) {
+    console.log(`Hello, ${name}! You are ${age} years old.`);
+    }
+    // Calling the function with arguments
+    greet('Alice', 25); 
+    // Outputs: "Hello, Alice! You are 25 years old."
+
+
+
+    Return Values are the values that a function sends back when it completes. These values can be used outside the function and are returned using the return keyword. If no return statement is provided, undefined is returned by default.
+
+    function add(a, b) {
+    return a + b;
+    }
+    let result = add(3, 4);
+    console.log(result); 
+    // Outputs: 7
