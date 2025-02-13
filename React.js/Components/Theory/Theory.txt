@@ -1,0 +1,72 @@
+Q1. What are components in React? Explain the difference between functional components and class components.
+A.  In React, components are the fundamental building blocks of a web application. A component is a self-contained, reusable unit of code that defines part of the user interface (UI). React applications are structured by combining multiple components to create a dynamic and interactive UI. Components help in organizing code, making development more efficient and maintainable.
+
+React components can be categorized into two main types:
+Functional Components
+Class Components
+
+Difference Between Functional and Class Components
+1. Functional Components
+Functional components are simple JavaScript functions that return JSX (JavaScript XML). They do not have their own state by default but can manage state and side effects using React Hooks such as useState and useEffect.
+
+Example of a Functional Component:
+    function Greeting(props) {
+    return <h1>Hello, {props.name}!</h1>;
+    }
+or using arrow function syntax: const Greeting = ({ name }) => <h1>Hello, {name}!</h1>;
+
+Advantages of Functional Components:
+    Easier to read and write.
+    More efficient as they do not require creating instances.
+    Improved performance with Hooks, eliminating the need for lifecycle methods.
+    Encouraged in modern React development.
+
+2. Class Components
+Class components are ES6 classes that extend React.Component and have access to state and lifecycle methods. They were commonly used before React Hooks were introduced but are now gradually being replaced by functional components.
+
+Example of a Class Component:
+    class Greeting extends React.Component {
+    render() {
+        return <h1>Hello, {this.props.name}!</h1>;
+    }
+    }
+Advantages of Class Components:
+    Can manage local state using this.state.
+    Provide lifecycle methods like componentDidMount() and componentDidUpdate().
+    Suitable for older versions of React (before Hooks).
+
+Key Differences Between Functional and Class Components
+    Syntax – Functional components are written as JavaScript functions, while class components use the ES6 class syntax.
+    State Management – Functional components use React Hooks, whereas class components use this.state.
+    Performance – Functional components are more efficient and recommended in modern React applications.
+    Lifecycle Methods – Functional components rely on useEffect, while class components have built-in lifecycle methods.
+    Complexity – Functional components are simpler and easier to maintain, making them the preferred choice for new applications.
+
+Q2.  How do you pass data to a component using props?
+A.   FEB 23,2025 (Topic is yet to start)
+
+
+
+Q3.  What is the role of render() in class components?
+     In React, the render() method plays a critical role in class components. It is responsible for defining what the UI (user interface) of the component will look like. The render() method is automatically called by React when the component's state or props change, and it returns the JSX (or React elements) that represent the component's visual output.
+
+Key Points About render() in Class Components:
+UI Definition: The render() method must return the JSX code or React elements that define the UI structure of the component. It cannot return undefined or null unless the component is intentionally not rendering anything.
+    class Greeting extends React.Component {
+    render() {
+        return <h1>Hello, {this.props.name}!</h1>;
+    }
+    }
+Automatic Execution: React automatically calls the render() method whenever the component’s state or props are updated, triggering a re-render of the component and updating the DOM accordingly.
+
+Pure Function: The render() method is considered a pure function. This means it does not directly modify the component’s state or interact with the DOM. Instead, it only returns JSX based on the current state and props.
+
+No Side Effects: The render() method should be free of side effects, like making API calls or updating state. Those tasks should be handled in lifecycle methods like componentDidMount() or componentDidUpdate().
+
+    class Greeting extends React.Component {
+    render() {
+        return <h1>Hello, {this.props.name}!</h1>;
+    }
+    }
+
+The render() method in class components is essential for rendering the UI based on the component's state and props. It is the only required method in class components and is called automatically whenever the component needs to be updated or re-rendered.
