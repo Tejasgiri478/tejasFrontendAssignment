@@ -1,0 +1,44 @@
+Q1. What is JSX in React.js? Why is it used?
+A.  JSX (JavaScript XML) is a syntax extension of JavaScript used in React to write UI components using an HTML-like syntax inside JavaScript. It makes code more readable and easier to manage by combining UI structure with logic. JSX is compiled into JavaScript before being rendered in the browser.
+
+JSX Used for:
+Improves Readability – Makes UI code more intuitive and maintainable.
+Enhances Performance – Optimized for React’s Virtual DOM, ensuring efficient updates.
+Prevents Security Risks – Automatically escapes values to prevent XSS attacks.
+Supports JavaScript Expressions – Allows embedding logic inside {} for dynamic rendering.
+Simplifies Component-Based Development – Helps create and reuse UI components easily.
+JSX is not mandatory in React but is widely used due to its efficiency and ease of development.
+
+
+Q2. How is JSX different from regular JavaScript? Can you write JavaScript insideJSX?
+A.  JSX is a syntax extension of JavaScript that allows writing HTML-like code inside JavaScript. Unlike regular JavaScript, JSX cannot be interpreted by browsers directly and needs to be compiled into JavaScript using Babel before execution.
+
+Example of Regular JavaScript:
+const element = document.createElement("h1");
+element.textContent = "Hello, World!";
+document.body.appendChild(element);
+
+Example of JSX:
+const element = <h1>Hello, World!</h1>;
+ReactDOM.render(element, document.getElementById("root"));
+JSX makes UI development simpler and more readable than manipulating the DOM manually in regular JavaScript.
+
+You can use variables, functions, conditionals, and expressions inside JSX, but statements like if and for must be written outside JSX or using ternary operators inside JSX.
+
+
+Q3. Discuss the importance of using curly braces {} in JSX expressions.
+A.  In JSX, curly braces {} are used to embed JavaScript expressions inside JSX code. They allow developers to insert dynamic content, making React components more interactive and flexible.
+
+Why Are curly braces {} Important in JSX?
+    Inject Dynamic Data – Display variables, function calls, or object properties.
+    const name = "John";
+    <h1>Hello, {name}!</h1>;
+
+    Use JavaScript Expressions – Perform calculations or logical operations.
+    <p>The sum is: {5 + 10}</p>;
+
+    Conditional Rendering – Apply ternary operators for inline conditions.
+    <h1>{isLoggedIn ? "Welcome back!" : "Please log in"}</h1>;
+
+    Looping with .map() – Render dynamic lists.
+    {items.map(item => <li key={item.id}>{item.name}</li>)}
