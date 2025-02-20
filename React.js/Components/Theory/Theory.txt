@@ -43,8 +43,22 @@ Key Differences Between Functional and Class Components
     Complexity – Functional components are simpler and easier to maintain, making them the preferred choice for new applications.
 
 Q2.  How do you pass data to a component using props?
-A.   FEB 23,2025 (Topic is yet to start)
+A.   Props data passes into function as an arguments or as an html tag,
+     import React from "react";
 
+        const Car = (props) => {
+            return <h2>My car name is: {props.name}</h2>;
+        };
+
+        const Garage = () => {
+            return (
+                <div>
+                    <Car name="Polo" />
+                </div>
+            );
+        };
+
+        export default Garage;
 
 
 Q3.  What is the role of render() in class components?
