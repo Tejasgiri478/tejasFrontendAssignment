@@ -1,0 +1,44 @@
+Q1. What are props in React.js? How are props different from state?
+A.  Props (short for "properties") in React are used to pass data from a parent component to a child component. They allow components to be dynamic and reusable by enabling data flow between components.
+
+Key Characteristics of Props:
+Immutable: Props are read-only and cannot be modified by the child component receiving them.
+Passed from Parent to Child: Props enable communication between components, making it possible to pass dynamic values.
+Used for Reusability: Components can be made reusable by accepting different props.
+Accessed in Functional and Class Components: In functional components, props are received as function arguments. In class components, they are accessed using this.props.
+
+Props are used to pass data from a parent component to a child component and are immutable, meaning they cannot be changed by the child. State, on the other hand, is mutable and managed within the component itself, allowing it to handle dynamic changes and user interactions. Props enable component communication, while state manages internal behavior.
+
+
+Q2. Explain the concept of state in React and how it is used to manage componentdata.
+State in React
+State is a built-in feature in React that allows components to store and manage data dynamically. Unlike props, which are immutable, state is mutable, meaning it can change over time based on user interactions or other factors.
+
+How State Works
+State is Local: It is managed within the component and does not affect other components unless explicitly shared.
+Changes Trigger Re-renders: When state updates, React automatically re-renders the component to reflect the new data.
+Managed Using useState (for Functional Components): The useState hook allows components to declare and update state. 
+
+Q3.  Why is this.setState() used in class components, and how does it work?
+A.   In React class components, this.setState() is used to update the component’s state in a way that triggers a re-render. Since state changes are asynchronous and should not be mutated directly, React provides setState() to schedule updates and ensure proper re-rendering.
+How this.setState() Works:
+
+Merges State Updates:
+Unlike useState() in functional components (which replaces the state), this.setState() merges the new state with the existing state.
+Example: this.setState({ count: this.state.count + 1 });
+
+Asynchronous Nature:
+setState() does not update the state immediately. Instead, it schedules an update and batches multiple state updates for performance.
+If the next state depends on the previous state, use the callback function form:
+this.setState((prevState) => ({
+  count: prevState.count + 1
+}));
+
+Triggers a Re-render:
+Once setState() is called, React determines whether a re-render is necessary and updates the UI accordingly.
+
+Optional Callback Function:
+setState() also accepts a second parameter, which is a callback executed after the state update:
+this.setState({ count: 5 }, () => {
+  console.log('State updated:', this.state.count);
+});
