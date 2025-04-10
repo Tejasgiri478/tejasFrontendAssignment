@@ -1,0 +1,51 @@
+Question 1: How are events handled in React compared to vanilla JavaScript? Explain the concept of synthetic events.
+Answer:
+In React, events are handled using Synthetic Events, which are a cross-browser wrapper around the browser's native events. This ensures that the events work consistently across all browsers. Unlike vanilla JavaScript, where you directly attach event listeners to DOM elements, in React, you attach event handlers to JSX elements using camelCase syntax (e.g., `onClick` instead of `onclick`). React's synthetic events are lightweight and optimized for performance.
+
+---
+
+Question 2: What are some common event handlers in React.js? Provide examples of onClick, onChange, and onSubmit.
+Answer:
+1. **onClick**: Used to handle click events.
+    ```jsx
+    function handleClick() {
+         alert('Button clicked!');
+    }
+
+    function App() {
+         return <button onClick={handleClick}>Click Me</button>;
+    }
+    ```
+
+2. **onChange**: Used to handle changes in input fields.
+    ```jsx
+    function App() {
+         const handleChange = (event) => {
+              console.log(event.target.value);
+         };
+
+         return <input type="text" onChange={handleChange} />;
+    }
+    ```
+
+3. **onSubmit**: Used to handle form submissions.
+    ```jsx
+    function App() {
+         const handleSubmit = (event) => {
+              event.preventDefault();
+              alert('Form submitted!');
+         };
+
+         return (
+              <form onSubmit={handleSubmit}>
+                    <button type="submit">Submit</button>
+              </form>
+         );
+    }
+    ```
+
+---
+
+Question 3: Why do you need to bind event handlers in class components?
+Answer:
+In class components, event handlers do not automatically bind to the instance of the class. This is because JavaScript's `this` keyword depends on how a function is called. To ensure that `this` refers to the correct instance of the class, you need to explicitly bind the event handler in the constructor or use an arrow function. For example:
