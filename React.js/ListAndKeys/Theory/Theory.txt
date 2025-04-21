@@ -1,0 +1,16 @@
+Question 1: How do you render a list of items in React? Why is it important to use keys when rendering lists?
+
+In React, you render a list of items by using the JavaScript `map()` function to iterate over an array and return a React element for each item. For example:
+
+const items = ['Apple', 'Banana', 'Cherry'];
+const list = items.map(item => <li key={item}>{item}</li>);
+
+Keys are important because they help React identify which items have changed, been added, or removed. This improves performance and helps React efficiently update and re-render components.
+
+---
+
+Question 2: What are keys in React, and what happens if you do not provide a unique key?
+
+Keys are special string attributes you must include when creating lists of elements in React. They should be unique among siblings. Keys help React keep track of elements and their state between renders.
+
+If you do not provide a unique key, React will use the array index as a fallback, which can lead to issues with component state and inefficient rendering. Using non-unique or missing keys can cause unexpected behavior and performance problems.
