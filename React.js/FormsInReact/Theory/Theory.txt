@@ -1,0 +1,36 @@
+Q1. How do you handle forms in React? Explain the concept of controlled components.
+ans. In React, forms are typically handled using controlled components. A controlled component is a form element (like <input>, <textarea>, or <select>) whose value is controlled by React state. This means the displayed value of the form element is always driven by the component's state, and any user input updates the state via event handlers.
+
+How it works:
+
+You store the form value in a state variable using useState.
+The form element's value prop is set to this state variable.
+You update the state variable using an onChange event handler.
+Example:
+
+Key points:
+
+React state is the "single source of truth" for the input value.
+Makes it easy to validate, format, or manipulate user input.
+
+
+Q2. What is the difference between controlled and uncontrolled components in React?
+ans. Controlled Components	Uncontrolled Components
+Form data is handled by React state.	Form data is handled by the DOM itself.
+Value is set via the value prop and updated with onChange.	Value is accessed using refs (e.g., useRef).
+Easier to validate and manipulate input.	Simpler for quick forms, but less flexible.
+Example: <input value={state} onChange={...} />	Example: <input ref={inputRef} />
+Controlled:
+
+React manages the input value.
+Good for complex forms, validation, and dynamic input.
+Uncontrolled:
+
+The DOM manages the input value.
+You read the value only when needed (e.g., on submit) using a ref.
+Example of uncontrolled:
+
+Summary:
+
+Use controlled components for most React forms for better control and predictability.
+Use uncontrolled components for simple cases or when integrating with non-React code.

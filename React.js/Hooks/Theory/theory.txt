@@ -1,0 +1,224 @@
+Question 1: What are React hooks? How do useState() and useEffect() hooks work in
+functional components?
+  A React Hook is a special function that allows you to “hook into” React features and lifecycle methods within functional components
+
+  In React functional components, useState() and useEffect() are two of the most commonly used Hooks that allow you to manage state and side effects respectively.
+
+  useState() — Add State to Functional Components
+  Purpose: To declare and manage local state in a functional component.
+  Syntax: const [state, setState] = useState(initialValue);
+
+  ex: import React, { useState } from 'react';
+  function Counter() {
+    const [count, setCount] = useState(0); // Initial value is 0
+    return (
+      <div>
+        <p>Count: {count}</p>
+        <button onClick={() => setCount(count + 1)}>Increment</button>
+      </div>
+    );
+  }
+
+  count is the current state value.
+  setCount is the function to update it.
+  clicking the button updates the state and re-renders the component.
+
+  useEffect() — Handle Side Effects
+  Purpose: To perform side effects in function components, such as:
+           Fetching data
+           Subscribing/unsubscribing
+           DOM manipulation
+           Setting up timers
+
+  syntax: useEffect(() => {
+            // Code here runs after every render
+
+            return () => {
+              // Cleanup code here (like componentWillUnmount)
+            };
+          }, [dependencies]);
+
+  ex: import React, { useState } from 'react';
+      function Counter() {
+        const [count, setCount] = useState(0); // Initial value is 0
+        return (
+          <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+          </div>
+        );
+      }
+
+  useEffect runs the timer once when the component mounts.
+  It returns a cleanup function to clear the timer when the component unmounts.
+
+   Dependency Array in useEffect
+    [] → Run once on mount.
+    [someVar] → Run when someVar changes.
+    Omit → Run after every render.
+
+
+Question 2: What problems did hooks solve in React development? Why are hooks
+considered an important addition to React?
+
+  Problems Before Hooks:
+    No State or Side Effects in Functional Components
+      Functional components were "stateless". You had to convert them to class components to use state, lifecycle methods, etc.
+
+    Code Duplication Across Components
+      Using lifecycle methods like componentDidMount and componentDidUpdate, similar logic (like fetching data) had to be duplicated or handled in awkward ways.
+
+    Hard-to-Understand Class Components
+      Class syntax, this keyword, and binding functions were often confusing, especially for beginners.
+
+    Poor Code Reusability
+      Sharing logic between components required Higher-Order Components (HOCs) or Render Props, both of which made the code complex and hard to follow.
+
+    Scattered Logic
+      In class components, related logic was spread across different lifecycle methods, making the component harder to maintain and understand.
+
+  What Hooks Introduced / Solved:
+   State & Side Effects in Functional Components
+    Hooks like useState() and useEffect() allow you to use state, side effects, and more inside functional components.
+
+   Cleaner & Simpler Code
+     No need for classes, this, or constructor. Hooks make components simpler and easier to read.
+
+   Better Code Reusability
+    Custom Hooks let you encapsulate logic (like fetching, form handling) and reuse it across components without duplication.
+
+   Group Related Logic Together
+    Hooks allow you to organize code by logic (e.g., data fetching, timers) rather than by lifecycle methods.
+
+   Improved Testing
+    Since Hooks are just functions, logic is easier to test independently.
+
+ Why Hooks Are Important in React:
+  They made functional components powerful and expressive.
+  Encouraged modern, cleaner, and modular code architecture.
+  Improved the developer experience with less boilerplate and more flexibility.
+  Enabled progressive adoption without breaking existing code.
+
+  ex: // Without Hooks (class)
+        class Counter extends React.Component {
+          state = { count: 0 };
+          render() {
+            return <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+              Count: {this.state.count}
+            </button>;
+          }
+        }
+
+        // With Hooks (function)
+        function Counter() {
+          const [count, setCount] = useState(0);
+          return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
+        }
+
+Question 3: What is useReducer? How do we use it in a React app?
+
+  useReducer is a React Hook used for managing more complex state logic in functional components. It is an alternative to useState, especially useful when state depends on previous values or when state logic is complex (like handling multiple sub-values or actions).
+
+  Syntax:
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+    - state: The current state value.
+    - dispatch: A function to send actions to the reducer.
+    - reducer: A function that receives (state, action) and returns the new state.
+    - initialState: The initial value of the state.
+
+  Example:
+    import React, { useReducer } from 'react';
+
+    // Reducer function
+    function reducer(state, action) {
+      switch (action.type) {
+        case 'increment':
+          return { count: state.count + 1 };
+        case 'decrement':
+          return { count: state.count - 1 };
+        default:
+          return state;
+      }
+    }
+
+    function Counter() {
+      const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+      return (
+        <div>
+          <p>Count: {state.count}</p>
+          <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+          <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+        </div>
+      );
+    }
+
+  When to use useReducer:
+    - When state logic is complex or involves multiple sub-values.
+    - When the next state depends on the previous state.
+    - When you want to organize state updates in a single place (the reducer function).
+
+Question 4: What is the purpose of useCallback & useMemo Hooks?
+
+  useCallback and useMemo are React Hooks used to optimize performance by memoizing functions and values, preventing unnecessary recalculations or re-creations on every render.
+
+  - useCallback: Returns a memoized version of a callback function that only changes if one of its dependencies changes. Useful when passing callbacks to child components to avoid unnecessary re-renders.
+
+    Syntax: const memoizedCallback = useCallback(() => { /* function */ }, [dependencies]);
+
+    Example:
+      import React, { useState, useCallback } from 'react';
+      function Counter() {
+        const [count, setCount] = useState(0);
+        const increment = useCallback(() => setCount(count + 1), [count]);
+        return <button onClick={increment}>Count: {count}</button>;
+      }
+
+  - useMemo: Returns a memoized value. It only recalculates the value when one of its dependencies changes. Useful for expensive calculations.
+
+    Syntax: const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+    Example:
+      import React, { useState, useMemo } from 'react';
+      function ExpensiveComponent({ a, b }) {
+        const result = useMemo(() => {
+          // expensive calculation
+          return a + b;
+        }, [a, b]);
+        return <div>Result: {result}</div>;
+      }
+
+Question 5: What’s the Difference between the useCallback & useMemo Hooks?
+
+  - useCallback returns a memoized function, while useMemo returns a memoized value.
+  - useCallback(fn, deps) is equivalent to useMemo(() => fn, deps).
+  - useCallback is used when you want to memoize a function definition, often to prevent unnecessary re-renders of child components.
+  - useMemo is used when you want to memoize the result of a computation.
+
+Question 6: What is useRef? How to work in react app?
+
+  useRef is a React Hook that returns a mutable ref object whose .current property persists across renders. It is commonly used to access and interact with DOM elements directly or to keep a mutable value that does not trigger a re-render when changed.
+
+  Syntax: const myRef = useRef(initialValue);
+
+  Example (accessing DOM element):
+    import React, { useRef } from 'react';
+    function InputFocus() {
+      const inputRef = useRef(null);
+      const focusInput = () => {
+        inputRef.current.focus();
+      };
+      return (
+        <div>
+          <input ref={inputRef} type="text" />
+          <button onClick={focusInput}>Focus Input</button>
+        </div>
+      );
+    }
+
+  Example (storing mutable value):
+    const countRef = useRef(0);
+    // countRef.current can be updated without causing a re-render
+
+  useRef does not notify you when its content changes. It’s mainly for accessing DOM nodes or keeping any mutable value around.
