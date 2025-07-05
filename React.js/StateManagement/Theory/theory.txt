@@ -1,0 +1,10 @@
+Question 1:
+Redux is a predictable state container for JavaScript applications, commonly used with React to manage application state in a centralized way. It helps in maintaining consistency, debugging, and testing by storing the entire state of the app in a single object called the store.
+
+Core concepts:
+- Actions: Plain JavaScript objects that describe what happened. They must have a 'type' property.
+- Reducers: Pure functions that take the current state and an action, and return a new state based on the action.
+- Store: The single source of truth that holds the application state and provides methods to dispatch actions and subscribe to changes.
+
+Question 2:
+Recoil simplifies state management in React by allowing components to share state using atoms and selectors, without the need for boilerplate code like actions and reducers. It integrates seamlessly with React's hooks, making state updates more intuitive and reducing the complexity compared to Redux. Recoil provides a more granular and flexible approach to state sharing and derived state, leading to simpler and more maintainable code.

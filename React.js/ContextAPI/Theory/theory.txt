@@ -1,0 +1,11 @@
+Question 1: What is the Context API in React? How is it used to manage global state across multiple components?
+
+The Context API in React is a built-in feature that allows you to share data (state) globally across a component tree without having to pass props manually at every level. It is useful for managing global state such as user authentication, themes, or language settings. By creating a context, you can provide a value at a higher level in the component tree and consume it in any nested component, making state management more efficient and reducing prop drilling.
+
+Question 2: Explain how createContext() and useContext() are used in React for sharing state.
+
+- `createContext()` is a function that creates a Context object. This object contains a Provider and a Consumer component.
+- The Provider component is used to wrap the part of your component tree that needs access to the shared state. It accepts a `value` prop, which is the data you want to share.
+- `useContext()` is a React hook that allows functional components to access the current value of a Context. You pass the Context object created by `createContext()` to `useContext()` to retrieve the shared value.
+
+Example:
