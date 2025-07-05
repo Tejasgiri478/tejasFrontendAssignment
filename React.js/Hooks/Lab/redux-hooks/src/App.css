@@ -1,0 +1,110 @@
+/* App Container */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Counter Display */
+.counter-display {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.counter-display h2 {
+  font-size: 3rem;
+  margin: 0;
+  color: #333;
+}
+
+/* Counter Controls */
+.counter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Button Colors */
+button:nth-child(1) {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+button:nth-child(2) {
+  background-color: #f7b731;
+  color: white;
+}
+
+button:nth-child(3) {
+  background-color: #20bf6b;
+  color: white;
+}
+
+/* Explanation Section */
+.explanation,
+.dev-tools-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.explanation h3,
+.dev-tools-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.explanation ul {
+  padding-left: 1.5rem;
+}
+
+.explanation li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* DevTools Info Section */
+.dev-tools-info {
+  background-color: #e9f7fe;
+  border-left: 4px solid #3498db;
+}
+
+.state-preview {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.state-preview pre {
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #333;
+}
